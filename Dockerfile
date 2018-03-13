@@ -9,6 +9,10 @@ RUN tar zxf nis-0.6.95.tgz
 RUN curl -L https://github.com/rb2nem/nem-servant/raw/master/servant.zip > servant.zip
 RUN unzip servant.zip
 
+# config
+RUN rm -f /package/nis/config.properties
+RUN ln -snf /etc/nis-config/config.properties /package/nis/config.properties
+
 # Tuning supervisor
 RUN sed -i 's/^\(\[supervisord\]\)$/\1\nnodaemon=true/' /etc/supervisord.conf
 
