@@ -1,5 +1,5 @@
 FROM java:8-alpine
-RUN apk --update add tar tmux supervisor procps jq unzip gnupg curl nss
+RUN apk --update add tar tmux supervisor procps jq unzip gnupg curl nss nginx
 
 # NEM software
 RUN curl -L http://bob.nem.ninja/nis-0.6.95.tgz > nis-0.6.95.tgz
