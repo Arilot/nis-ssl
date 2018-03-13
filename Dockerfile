@@ -26,5 +26,6 @@ EXPOSE 7890
 
 VOLUME /root
 VOLUME /etc/nis-ssl
+VOLUME /etc/nis-config
 
 CMD ["/usr/bin/supervisord"]
